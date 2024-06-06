@@ -7,10 +7,21 @@ function App() {
   const [name, setName] = useState("Saksham");
 
   return (
-    <>
-      <HeaderWithButton />
+    <div>
+      <button
+        onClick={() => {
+          setName(Math.random());
+        }}
+      >
+        Click me to change title
+      </button>
+      <Header x={name} />
       <Header x={"Khare"} />
-    </>
+      <Header x={"Khare"} />
+      <Header x={"Khare"} />
+      <Header x={"Khare"} />
+      <Header x={"Khare"} />
+    </div>
   );
 }
 
