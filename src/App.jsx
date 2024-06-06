@@ -58,7 +58,7 @@ function App() {
       </button>
 
       {todo.map((i) => (
-        <Todo title={i.title} description={i.description} />
+        <Todo key={i.id} title={i.title} description={i.description} />
       ))}
     </div>
   );
