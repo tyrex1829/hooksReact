@@ -67,8 +67,14 @@ function App() {
       ))} */}
 
       {/* wrapper Component */}
-      <CardWrapper innerComponent={<TextComponent />} />
-      <CardWrapper innerComponent={<InputComponent />} />
+      {/* <CardWrapper innerComponent={<TextComponent />} />
+      <CardWrapper innerComponent={<InputComponent />} /> */}
+
+      {/* real code of wrapper */}
+      <CardWrapper>
+        This is first inner text for wrapper. Here we don't do it explicitly.
+      </CardWrapper>
+      <CardWrapper>This is second inner Text for wrapper.</CardWrapper>
     </div>
   );
 }
