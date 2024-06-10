@@ -5,6 +5,7 @@ import HeaderWithButton from "./components/HeaderWithButton";
 import Todo from "./components/Todo";
 import CardWrapper from "./components/CardWrapper";
 import TextComponent from "./components/TextComponent";
+import InputComponent from "./components/InputComponent";
 
 function App() {
   const [id, setId] = useState(3);
@@ -67,7 +68,7 @@ function App() {
 
       {/* wrapper Component */}
       <CardWrapper innerComponent={<TextComponent />} />
-      <CardWrapper innerComponent={<TextComponent />} />
+      <CardWrapper innerComponent={<InputComponent />} />
     </div>
   );
 }
