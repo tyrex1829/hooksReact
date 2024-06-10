@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/Header";
 import HeaderWithButton from "./components/HeaderWithButton";
 import Todo from "./components/Todo";
+import CardWrapper from "./components/CardWrapper";
+import TextComponent from "./components/TextComponent";
 
 function App() {
   const [id, setId] = useState(3);
@@ -26,6 +28,7 @@ function App() {
 
   return (
     <div>
+      {/* // header */}
       {/* <button
         onClick={() => {
           setName(Math.random());
@@ -40,7 +43,8 @@ function App() {
       <Header x={"Khare"} />
       <Header x={"Khare"} /> */}
 
-      <button
+      {/* // todo */}
+      {/* <button
         onClick={() => {
           setId(id + 1);
 
@@ -59,7 +63,11 @@ function App() {
 
       {todo.map((i) => (
         <Todo key={i.id} title={i.title} description={i.description} />
-      ))}
+      ))} */}
+
+      {/* wrapper Component */}
+      <CardWrapper innerComponent={<TextComponent />} />
+      <CardWrapper innerComponent={<TextComponent />} />
     </div>
   );
 }
