@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import HeaderWithButton from "./components/HeaderWithButton";
@@ -27,6 +27,11 @@ function App() {
     },
   ]);
 
+  // useEffect
+  useEffect(() => {
+    alert("Render");
+  }, []);
+
   return (
     <div>
       {/* // header */}
@@ -43,7 +48,6 @@ function App() {
       <Header x={"Khare"} />
       <Header x={"Khare"} />
       <Header x={"Khare"} /> */}
-
       {/* // todo */}
       {/* <button
         onClick={() => {
@@ -65,16 +69,16 @@ function App() {
       {todo.map((i) => (
         <Todo key={i.id} title={i.title} description={i.description} />
       ))} */}
-
       {/* wrapper Component */}
       {/* <CardWrapper innerComponent={<TextComponent />} />
       <CardWrapper innerComponent={<InputComponent />} /> */}
-
       {/* real code of wrapper */}
-      <CardWrapper>
+      {/* <CardWrapper>
         This is first inner text for wrapper. Here we don't do it explicitly.
       </CardWrapper>
-      <CardWrapper>This is second inner Text for wrapper.</CardWrapper>
+      <CardWrapper>This is second inner Text for wrapper.</CardWrapper> */}
+      {/* useEffect text */}
+      Checking if above alert is render only once. This text is useless.
     </div>
   );
 }
